@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* GENERAL */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    background: #0F0E0E;
+    background: linear-gradient(144deg, #333333 0%, #0F0E0E 75%);
+
+    color: #FFF9F8;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.wrapper {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.fade {
+  opacity: 0;
+  animation: fadein 600ms 3200ms forwards;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+}
+
+
+.description {
+  font-size: 1.75rem;
+  text-align: center;
+  line-height: 1.5;
+  margin: 1.75rem auto;
+}
+
+.cta {
+  background: linear-gradient(144deg, #ff9040 0%, #7862FF 76%);
+  background-size: 100%;
+
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 200ms;
+}
+
+.cta:hover {
+  color: white;
+  background-size: 200%;
+}
+
+
+.social-media {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.social-media .fa-brands {
+  margin: 0 0.75rem;
+}
+
+.social-media a, .social-media a:hover, .social-media a:active {
+  color: #FFF9F8;
+}
+
+
+
+/* MARQUEE */
+
+.marquee {
+  position: fixed;
+  width: 100vw;
+  max-width: 100%;
+  height: 3rem;
+}
+
+  .track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    width: 400vw;
+    margin: 1rem 0;
+    font-size: 1.125rem;
+  }
+
+  .marquee.top {
+    top: 0;
+  }
+
+  .marquee.bottom {
+    bottom: 0;
+  }
+
+  .marquee.top .track {
+    animation: marquee 25.5s linear infinite;
+  }
+
+  .marquee.bottom .track {
+    animation: oppositemarquee 25.5s linear infinite;
+  }
+  
+ .marquee .track .content {
+    display: flex;
+    justify-content: space-evenly;
+    line-height: 1;
+ }
+ 
+  .marquee .track .content .full {
+    display: flex;
+    justify-content: space-evenly;
+ }
+ 
+ .marquee .track .content .service {
+   display: block;
+   text-align: center;
+   text-transform: uppercase;
+   width: 50vw;
+   padding: 0 32px;
+ }
+  .marquee .track .content .icon {
+   display: block;
+   width: 30px;
+   text-align: center;
+ }
+
+
+  @keyframes marquee {
+    from {
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -moz-transform: translateX(0);
+      transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(-200vw);
+      -moz-transform: translateX(-200vw);
+      -moz-transform: translateX(-200vw);
+      transform: translateX(-200vw);
+    }
+  }
+
+
+  @keyframes oppositemarquee {
+    from {
+      -webkit-transform: translateX(-200vw);
+      -moz-transform: translateX(-200vw);
+      -moz-transform: translateX(-200vw);
+      transform: translateX(-200vw);
+    }
+    to {
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -moz-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+
+
+
+  @keyframes fadein {
+    from {
+     opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+
+/*
+
+ INTRO 1 SHOW
+ INTRO 1 HIDE
+
+ INTRO 2 SHOW
+ INTRO 2 HIDE
+
+ INTRO 3 SHOW
+ INTRO 3 HIDE
+
+ INTRO 4 SHOW
+
+
+
+
+
+
+*/
+
+
+
+/*   INTRO ANIMATION   */
+
+.headline {
+  height: 100px;
+}
+
+.intro {
+  height: 0;
+}
+
+.intro1 {
+  animation-name: show;
+  animation-duration: 5ms;
+  animation-fill-mode:forwards;
+}
+
+.hide1 {
+  overflow: hidden;
+  animation-duration: 5ms;
+  animation-delay: 700ms;
+  animation-fill-mode: forwards;
+}
+
+.intro2 {
+  animation-name: show;
+  animation-duration: 5ms;
+  animation-delay: 700ms;
+  animation-fill-mode: forwards;
+
+}
+
+.hide2 {
+  overflow: hidden;
+  animation-duration: 5ms;
+  animation-delay: 1400ms;
+  animation-fill-mode: forwards;
+}
+
+.intro3 {
+  animation-name: show;
+  animation-duration: 5ms;
+  animation-delay: 1400ms;
+  animation-fill-mode: forwards;
+}
+
+.hide3 {
+  overflow: hidden;
+  animation-duration: 5ms;
+  animation-delay: 2100ms;
+  animation-fill-mode: forwards;
+}
+
+
+.hide{
+  animation-name: hide;
+  text-align: left;
+  overflow: hidden;
+}
+
+.title-wrapper {
+  height: 0;
+  overflow: hidden;
+  animation-name: showtitle;
+  animation-duration: 5ms;
+  animation-delay: 2100ms;
+  animation-fill-mode: forwards;
+  text-align: left;
+ 
+}
+
+.title {
+  animation-name: enter;
+  animation-duration: 600ms;
+  animation-delay: 2800ms;
+  animation-fill-mode: forwards;
+  transition: all 800ms;
+  margin: 0;
+  height: 50px;
+  display: block;
+}
+
+
+@keyframes enter {
+  0% {
+    height: 50px;
+    margin: 0;
+  }
+  25% {
+    margin: auto;
+    height: 50px;
+  }
+
+  100% {
+    margin: auto;
+    height: 80px;
+  }
+}
+
+@keyframes hide {
+  from {
+    height: 50px;
+  }
+  to {
+    height: 0;
+
+  }
+}
+
+@keyframes show {
+  from {
+    height: 0;
+
+  }
+  to {
+    height: 50px;
+  }
+}
+
+@keyframes showtitle {
+  from {
+    height: 0;
+
+  }
+  to {
+    height: 80px;
+  }
+}
