@@ -46,6 +46,10 @@ body {
   margin: 1.75rem auto;
 }
 
+.description p {
+ margin: 0;
+}
+
 .cta {
   background: linear-gradient(144deg, #ff9040 0%, #7862FF 76%);
   background-size: 100%;
@@ -58,6 +62,7 @@ body {
   font-weight: 600;
   border-radius: 10px;
   transition: all 200ms;
+  margin-top: 2rem;
 }
 
 .cta:hover {
@@ -68,7 +73,7 @@ body {
 
 .social-media {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
 }
 
 .social-media .fa-brands {
@@ -171,6 +176,36 @@ body {
     }
   }
 
+  @keyframes marqueemob {
+    from {
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -moz-transform: translateX(0);
+      transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(-400vw);
+      -moz-transform: translateX(-400vw);
+      -moz-transform: translateX(-400vw);
+      transform: translateX(-400vw);
+    }
+  }
+
+
+  @keyframes oppositemarqueemob {
+    from {
+      -webkit-transform: translateX(-400vw);
+      -moz-transform: translateX(-400vw);
+      -moz-transform: translateX(-400vw);
+      transform: translateX(-400vw);
+    }
+    to {
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -moz-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
 
 
   @keyframes fadein {
@@ -214,10 +249,10 @@ body {
 
 .intro {
   height: 0;
+  animation-name: show;
 }
 
 .intro1 {
-  animation-name: show;
   animation-duration: 5ms;
   animation-fill-mode:forwards;
 }
@@ -230,7 +265,6 @@ body {
 }
 
 .intro2 {
-  animation-name: show;
   animation-duration: 5ms;
   animation-delay: 700ms;
   animation-fill-mode: forwards;
@@ -245,7 +279,6 @@ body {
 }
 
 .intro3 {
-  animation-name: show;
   animation-duration: 5ms;
   animation-delay: 1400ms;
   animation-fill-mode: forwards;
@@ -285,6 +318,7 @@ body {
   margin: 0;
   height: 50px;
   display: block;
+  max-width: 90vw;
 }
 
 
@@ -331,5 +365,174 @@ body {
   }
   to {
     height: 80px;
+  }
+}
+
+
+
+@keyframes entertab {
+  0% {
+    height: 30px;
+    margin: 0;
+  }
+  25% {
+    margin: auto;
+    height: 30px;
+  }
+
+  100% {
+    margin: auto;
+    height: 50px;
+  }
+}
+
+@keyframes hidetab {
+  from {
+    height: 30px;
+  }
+  to {
+    height: 0;
+
+  }
+}
+
+@keyframes showtab {
+  from {
+    height: 0;
+
+  }
+  to {
+    height: 30px;
+  }
+}
+
+@keyframes showtitletab {
+  from {
+    height: 0;
+
+  }
+  to {
+    height: 50px;
+  }
+}
+
+
+
+@keyframes entermob {
+  0% {
+    height: 20px;
+    margin: 0;
+  }
+  25% {
+    margin: auto;
+    height: 20px;
+  }
+
+  100% {
+    margin: auto;
+    height: 30px;
+  }
+}
+
+@keyframes hidemob {
+  from {
+    height: 20px;
+  }
+  to {
+    height: 0;
+
+  }
+}
+
+@keyframes showmob {
+  from {
+    height: 0;
+
+  }
+  to {
+    height: 20px;
+  }
+}
+
+@keyframes showtitlemob {
+  from {
+    height: 0;
+
+  }
+  to {
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .headline {
+    height: 50px;
+  }
+  .title {
+    animation-name: entertab;
+    height: 30px;
+  }
+  .title-wrapper {
+    animation-name: showtitletab;
+  }
+  .hide{
+    animation-name: hidetab;
+  }  
+  .intro {
+    animation-name: showtab;
+  }
+
+  .marquee.top .track {
+    width: 800vw;
+    animation: marqueemob 20.5s linear infinite;
+  }
+
+  .marquee.bottom .track {
+    width: 800vw;
+    animation: oppositemarqueemob 20.5s linear infinite;
+  }
+
+  .social-media {
+    font-size: 2rem;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .headline {
+    height: 40px;
+  }
+  .social-media {
+    font-size: 1.5rem;
+  }
+  .title {
+    animation-name: entermob;
+    height: 20px;
+  }
+  .title-wrapper {
+    animation-name: showtitlemob;
+  }
+  .hide{
+    animation-name: hidemob;
+  }  
+  .intro {
+    animation-name: showmob;
+  }
+
+  .marquee.top .track {
+    width: 800vw;
+    animation: marqueemob 15.5s linear infinite;
+  }
+
+  .marquee.bottom .track {
+    width: 800vw;
+    animation: oppositemarqueemob 15.5s linear infinite;
+  }
+}
+
+@media only screen and (max-width: 648px) {
+
+  .description {
+    font-size: 1rem;;
   }
 }
