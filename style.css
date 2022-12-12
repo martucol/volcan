@@ -294,7 +294,7 @@ body {
 
 .hide{
   animation-name: hide;
-  text-align: left;
+  text-align: center;
   overflow: hidden;
 }
 
@@ -305,7 +305,7 @@ body {
   animation-duration: 5ms;
   animation-delay: 2100ms;
   animation-fill-mode: forwards;
-  text-align: left;
+  text-align: center;
  
 }
 
@@ -315,7 +315,7 @@ body {
   animation-delay: 2800ms;
   animation-fill-mode: forwards;
   transition: all 800ms;
-  margin: 0;
+  margin: auto;
   height: 50px;
   display: block;
   max-width: 90vw;
@@ -325,15 +325,12 @@ body {
 @keyframes enter {
   0% {
     height: 50px;
-    margin: 0;
   }
   25% {
-    margin: auto;
     height: 50px;
   }
 
   100% {
-    margin: auto;
     height: 80px;
   }
 }
@@ -373,15 +370,12 @@ body {
 @keyframes entertab {
   0% {
     height: 30px;
-    margin: 0;
   }
   25% {
-    margin: auto;
     height: 30px;
   }
 
   100% {
-    margin: auto;
     height: 50px;
   }
 }
@@ -421,15 +415,12 @@ body {
 @keyframes entermob {
   0% {
     height: 20px;
-    margin: 0;
   }
   25% {
-    margin: auto;
     height: 20px;
   }
 
   100% {
-    margin: auto;
     height: 30px;
   }
 }
@@ -482,6 +473,10 @@ body {
     animation-name: showtab;
   }
 
+  .icon {
+    width: 20px;
+  }
+
   .marquee.top .track {
     width: 800vw;
     animation: marqueemob 20.5s linear infinite;
@@ -519,6 +514,9 @@ body {
     animation-name: showmob;
   }
 
+  .icon img {
+    width: 20px;
+  }
   .marquee.top .track {
     width: 800vw;
     animation: marqueemob 15.5s linear infinite;
